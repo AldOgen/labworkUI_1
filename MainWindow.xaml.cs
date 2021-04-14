@@ -93,6 +93,12 @@ namespace labworkUI_1 {
                 MainCollection.IsSave = false;
             }
         }
+
+        private void WindowClosing(object sender, System.ComponentModel.CancelEventArgs e) {
+            if (!MainCollection.IsSave) {
+                e.Cancel = !SaveDialog();
+            }
+        }
         #endregion
 
         #region Filters
@@ -107,7 +113,7 @@ namespace labworkUI_1 {
 
         #region Utility
         private bool SaveDialog() {
-            var MessageSave = MessageBox.Show("Сохранить текущий экземпляр?", "AO", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
+            var MessageSave = MessageBox.Show("Сохранить текущий экземпляр?", "UILab1", MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
             switch (MessageSave) {
                 case MessageBoxResult.Yes:
                     SaveFileDialog SaveDialog = new SaveFileDialog {
