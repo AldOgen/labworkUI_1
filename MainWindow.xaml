@@ -58,7 +58,7 @@
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="4*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock HorizontalAlignment="Left" Margin="48,22,48,22" Text="Элементы в V2DataCollection" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="0"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="48,22,48,22" Text="Элементы V2DataCollection" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="0"/>
                     <ListBox Name="listBox_DataCollection" ItemsSource="{Binding Source={StaticResource DataCollection}}" ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="50,23,50,23" Grid.Row="1"/>
                 </Grid>
                 <Grid Grid.Row="2">
@@ -66,7 +66,7 @@
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="4*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock HorizontalAlignment="Left" Margin="48,22,48,22" Text="Элементы в V2DataOnGrid" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="0"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="48,22,48,22" Text="Элементы V2DataOnGrid" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="0"/>
                     <ListBox Name="lisBox_DataOnGrid" ItemsSource="{Binding Source={StaticResource DataOnGrid}}" ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="50,23,50,23" Grid.Row="1"/>
                 </Grid>
             </Grid>
@@ -89,7 +89,7 @@
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="4*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock HorizontalAlignment="Left" Margin="48,22,48,22" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="0"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="48,22,48,22" Text="Элементы в V2DataCollection" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="0"/>
                     <ListBox Name="listBox_details"  DataContext="{Binding ElementName=listBox_DataCollection, Path=SelectedItem}" ItemsSource="{Binding Path=Values_field}" ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="50,23,50,23" Grid.Row="1"/>
                 </Grid>
                 <Grid Grid.Row="2">
@@ -97,7 +97,7 @@
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="4*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock HorizontalAlignment="Left" Margin="48,22,48,22" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="0"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="48,22,48,22" Text="Минимальное и максимальное значение в V2DataOnGrid" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="0"/>
                     <TextBlock Name="textBlock_details" HorizontalAlignment="Left" Margin="48,22,48,22" DataContext="{Binding ElementName=lisBox_DataOnGrid, Path=SelectedItem}" Text="{Binding Path=MinMaxValues, Converter={StaticResource CMinMaxToStr}, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="1"/>
                 </Grid>
             </Grid>

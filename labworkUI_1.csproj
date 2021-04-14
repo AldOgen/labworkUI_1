@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ClassLibrary\**" />
+    <EmbeddedResource Remove="ClassLibrary\**" />
+    <None Remove="ClassLibrary\**" />
+    <Page Remove="ClassLibrary\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
   </ItemGroup>
 
